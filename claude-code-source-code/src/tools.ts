@@ -78,6 +78,16 @@ import { ToolSearchTool } from './tools/ToolSearchTool/ToolSearchTool.js'
 import { EnterPlanModeTool } from './tools/EnterPlanModeTool/EnterPlanModeTool.js'
 import { EnterWorktreeTool } from './tools/EnterWorktreeTool/EnterWorktreeTool.js'
 import { ExitWorktreeTool } from './tools/ExitWorktreeTool/ExitWorktreeTool.js'
+// Novel writing tools
+import { WorldBuildTool } from './tools/NovelTools/WorldBuildTool.js'
+import { CharacterTool } from './tools/NovelTools/CharacterTool.js'
+import { PlotTool } from './tools/NovelTools/PlotTool.js'
+import { TimelineTool } from './tools/NovelTools/TimelineTool.js'
+import { OutlineTool } from './tools/NovelTools/OutlineTool.js'
+import { ChapterWriteTool } from './tools/NovelTools/ChapterWriteTool.js'
+import { ChapterReadTool } from './tools/NovelTools/ChapterReadTool.js'
+import { ChapterEditTool } from './tools/NovelTools/ChapterEditTool.js'
+import { StyleCheckTool } from './tools/NovelTools/StyleCheckTool.js'
 import { ConfigTool } from './tools/ConfigTool/ConfigTool.js'
 import { TaskCreateTool } from './tools/TaskCreateTool/TaskCreateTool.js'
 import { TaskGetTool } from './tools/TaskGetTool/TaskGetTool.js'
@@ -101,7 +111,7 @@ export {
   ASYNC_AGENT_ALLOWED_TOOLS,
   COORDINATOR_MODE_ALLOWED_TOOLS,
 } from './constants/tools.js'
-import { feature } from 'bun:bundle'
+import { feature } from '../stubs/bun-bundle.js'
 // Dead code elimination: conditional import for OVERFLOW_TEST_TOOL
 /* eslint-disable custom-rules/no-process-env-top-level, @typescript-eslint/no-require-imports */
 const OverflowTestTool = feature('OVERFLOW_TEST_TOOL')
@@ -247,6 +257,16 @@ export function getAllBaseTools(): Tools {
     // Include ToolSearchTool when tool search might be enabled (optimistic check)
     // The actual decision to defer tools happens at request time in claude.ts
     ...(isToolSearchEnabledOptimistic() ? [ToolSearchTool] : []),
+    // Novel writing tools
+    WorldBuildTool,
+    CharacterTool,
+    PlotTool,
+    TimelineTool,
+    OutlineTool,
+    ChapterWriteTool,
+    ChapterReadTool,
+    ChapterEditTool,
+    StyleCheckTool,
   ]
 }
 

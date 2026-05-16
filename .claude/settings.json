@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mkdir -p /home2/zhangyong/collection-claude-code-source-code/claude-code-source-code/src/tools/NovelTools)",
+      "Read(//usr/local/bin/**)",
+      "Read(//usr/bin/**)"
+    ],
+    "additionalDirectories": [
+      "/home2/zhangyong/collection-claude-code-source-code/claude-code-source-code/src/tools"
+    ]
+  }
+}

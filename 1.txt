@@ -1,0 +1,53 @@
+PS D:\code\collection-claude-code-source-code\claude-code-source-code> npm run build
+
+> @anthropic-ai/claude-code-source@2.1.88 build
+> npm run prepare-src && node scripts/build.mjs
+
+
+> @anthropic-ai/claude-code-source@2.1.88 prepare-src
+> node scripts/prepare-src.mjs
+
+🔧 Preparing source files...
+
+  patched: src\cli\update.ts
+  patched: src\commands\insights.ts
+  patched: src\components\Feedback.tsx
+  patched: src\entrypoints\cli.tsx
+  patched: src\services\mcp\client.ts
+  patched: src\utils\autoUpdater.ts
+  patched: src\utils\doctorDiagnostic.ts
+  patched: src\utils\nativeInstaller\installer.ts
+  patched: src\utils\sessionStorage.ts
+  created: stubs/global.d.ts
+
+✅ Patched 9 / 1895 source files
+✅ Phase 1: Copied src/ → build-src/
+✅ Phase 2: Transformed 217 files
+✅ Phase 2.5: Added 1 missing exports
+✅ Phase 3: Created entry wrapper
+
+🔨 Phase 4 round 1/10: Bundling...
+   Found 113 missing modules
+   Created 133 stubs, externalized 0 npm packages
+
+🔨 Phase 4 round 2/10: Bundling...
+   Found 109 missing modules
+   Externalizing all remaining missing modules...
+
+🔨 Phase 4 round 3/10: Bundling...
+   Found 9 files with missing exports, patching...
+   Patched 9 files with missing exports
+
+🔨 Phase 4 round 4/10: Bundling...
+   No export errors matched (raw output dumped to esbuild-errors.txt)
+❌ Unrecoverable errors:
+   ✘ [ERROR] Multiple exports with the same name "isReplBridgeActive"
+   ✘ [ERROR] The symbol "isReplBridgeActive" has already been declared
+
+❌ Build failed after all rounds.
+   The transformed source is in build-src/ for inspection.
+
+   To fix manually:
+   1. Check build-src/ for the transformed files
+   2. Create missing stubs in build-src/src/
+   3. Re-run: node scripts/build.mjs

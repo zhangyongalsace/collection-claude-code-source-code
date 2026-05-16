@@ -1,0 +1,60 @@
+X [ERROR] No matching export in "build-src/src/utils/stubs/bun-bundle.js" for import "feature"
+
+    build-src/src/utils/permissions/yoloClassifier.ts:1:9:
+      1 │ import { feature } from '../stubs/bun-bundle.js'
+        ╵          ~~~~~~~
+
+X [ERROR] No matching export in "build-src/src/tools/TungstenTool/TungstenTool.js" for import "TungstenTool"
+
+    build-src/src/tools.ts:47:9:
+      47 │ import { TungstenTool } from './tools/TungstenTool/TungstenTool.js'
+         ╵          ~~~~~~~~~~~~
+
+X [ERROR] No matching export in "build-src/src/stubs/bun-bundle.js" for import "feature"
+
+    build-src/src/constants/prompts.ts:48:9:
+      48 │ import { feature } from '../stubs/bun-bundle.js'
+         ╵          ~~~~~~~
+
+X [ERROR] No matching export in "build-src/src/utils/filePersistence/types.js" for import "DEFAULT_UPLOAD_CONCURRENCY"
+
+    build-src/src/utils/filePersistence/filePersistence.ts:30:2:
+      30 │   DEFAULT_UPLOAD_CONCURRENCY,
+         ╵   ~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+X [ERROR] No matching export in "build-src/src/utils/filePersistence/types.js" for import "FILE_COUNT_LIMIT"
+
+    build-src/src/utils/filePersistence/filePersistence.ts:32:2:
+      32 │   FILE_COUNT_LIMIT,
+         ╵   ~~~~~~~~~~~~~~~~
+
+X [ERROR] No matching export in "build-src/src/utils/filePersistence/types.js" for import "OUTPUTS_SUBDIR"
+
+    build-src/src/utils/filePersistence/filePersistence.ts:34:2:
+      34 │   OUTPUTS_SUBDIR,
+         ╵   ~~~~~~~~~~~~~~
+
+node:child_process:964
+    throw err;
+    ^
+
+Error: Command failed: D:\code\collection-claude-code-source-code\claude-code-source-code\node_modules\@esbuild\win32-x64\esbuild.exe D:\code\collection-claude-code-source-code\claude-code-source-code\build-src\entry.ts --bundle --platform=node --target=node18 --format=esm --outfile=D:\code\collection-claude-code-source-code\claude-code-source-code\dist\cli.js --loader:.md=text --external:bun:* --external:color-diff-napi --external:@ant/* --external:@aws-sdk/client-sts --external:@anthropic-ai/bedrock-sdk --external:proper-lockfile --external:@anthropic-ai/foundry-sdk --external:@aws-sdk/client-bedrock --external:@smithy/node-http-handler --external:@smithy/core --external:@azure/identity --external:@aws-sdk/client-bedrock-runtime --external:@anthropic-ai/vertex-sdk --external:google-auth-library --external:undici --external:@aws-sdk/credential-provider-node --external:fflate --external:sharp --external:yaml --external:ws --external:@anthropic-ai/mcpb --external:@opentelemetry/exporter-metrics-otlp-grpc --external:@opentelemetry/exporter-metrics-otlp-http --external:@opentelemetry/exporter-metrics-otlp-proto --external:@opentelemetry/exporter-prometheus --external:@opentelemetry/exporter-logs-otlp-grpc --external:@opentelemetry/exporter-logs-otlp-http --external:@opentelemetry/exporter-logs-otlp-proto --external:@opentelemetry/exporter-trace-otlp-grpc --external:turndown --external:@opentelemetry/exporter-trace-otlp-http --external:@opentelemetry/exporter-trace-otlp-proto --external:modifiers-napi --allow-overwrite --log-level=error --log-limit=0 --sourcemap
+    at genericNodeError (node:internal/errors:985:15)
+    at wrappedFn (node:internal/errors:539:14)
+    at checkExecSyncError (node:child_process:925:11)
+    at Object.execFileSync (node:child_process:961:15)
+    at Object.<anonymous> (D:\code\collection-claude-code-source-code\claude-code-source-code\node_modules\esbuild\bin\esbuild:222:28)
+    at Module._compile (node:internal/modules/cjs/loader:1830:14)
+    at Object..js (node:internal/modules/cjs/loader:1961:10)
+    at Module.load (node:internal/modules/cjs/loader:1553:32)
+    at Module._load (node:internal/modules/cjs/loader:1355:12)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19) {
+  status: 1,
+  signal: null,
+  output: [ null, null, null ],
+  pid: 20336,
+  stdout: null,
+  stderr: null
+}
+
+Node.js v24.15.0
